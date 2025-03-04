@@ -1,3 +1,4 @@
+import { ThumbsUp, Trash } from "phosphor-react";
 import styles from "./Comment.module.css";
 
 export function Comment() {
@@ -9,7 +10,34 @@ export function Comment() {
         alt=""
       />
       <div className={styles.commentBox}>
-        <div className={styles.commentContent}></div>
+        <div className={styles.commentContent}>
+          <header>
+            <div className={styles.authorAndTime}>
+              <strong>Corteis Junior</strong>
+              <time
+                title="27 de Fevereiro de 2025"
+                dateTime="2025-02-27  19:16:42"
+              >
+                Cerca de 1h atrás
+              </time>
+            </div>
+            <button title="Deletar comentário">
+              <Trash size={24} />
+            </button>
+          </header>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            officiis soluta, velit tempora vitae amet? Id atque asperiores
+            magni, officiis neque maiores quae amet consequuntur perferendis
+            nihil reiciendis numquam tenetur?
+          </p>
+        </div>
+        <footer>
+          <button>
+            <ThumbsUp />
+            Aplaudir <span>20</span>
+          </button>
+        </footer>
       </div>
     </div>
   );
